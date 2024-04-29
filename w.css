@@ -1,0 +1,301 @@
+/* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(50, 43, 57);
+}
+.slider{
+ position: relative;
+ width: 60%;
+ overflow: hidden;
+}
+.images{
+    display: flex;
+    width: 100%;
+}
+.images img{
+    height: 400px;
+    width: 100%;
+    transition: all 0.15 ease;
+}
+.images input{
+ display: none;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+margin: 5px;
+
+}
+.dots label{
+    height: 20px;
+    width: 29px;
+    border-radius: 50%;
+    border:  solid #fff 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover{
+    background-color: #fff;
+}
+#img1:checked~.m1{
+    margin-left: 0;
+}
+#img2:checked~.m2{
+    margin-left: -100%;
+}
+
+#img3:checked~.m3{
+    margin-left: -200%;
+}
+
+#img4:checked~.m4{
+    margin-left: -300%;
+} */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #191919;
+}
+.gallary{
+    width: 900px;
+    display: flex;
+    overflow-x: scroll;
+}
+.gallary div{
+   width: 100%;
+   display: grid;
+   grid-template-columns:  auto auto auto;
+   grid-gap: 20px;
+   padding: 10px;
+   flex: none;
+}
+.gallary div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: transform 0.5s;
+}
+i{
+    color: aliceblue;
+}
+.gallary::-webkit-scrollbar{
+    display: none;
+}
+.gallary-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+#backBtn ,#nextBtn{
+    width: 50px;
+    cursor: pointer;
+    margin: 40px;
+}
+.gallary div img:hover{
+  filter: grayscale(0);
+  cursor: pointer;
+  transform: scale(1.1);
+} 
+ */
+
+
+
+
+/* 
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+} */
+/* .tag-list{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tag-list li{
+    padding: 1rem;
+    background-color: beige;
+    border-radius: .5rem;
+    box-shadow: 0 .0rem 1rem -.25rem rebeccapurple;
+}
+
+.scroller{
+    max-width: 90%;
+    background-color: rgb(53, 41, 56);
+    
+
+}
+.scroller__inner{
+    padding-block: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+} */
+/* p{
+    font-size: 30PX;
+    font-weight: 700;
+    color: rgb(123, 113, 101);
+} */
+/* img{
+    background-image: linear-gradient(white,#5790AB);
+    width: 560px;
+} */
+
+
+
+
+
+
+
+
+.main{
+    display: flex;
+}
+h3{
+    margin-bottom: 50px;
+    color: #5790AB;
+}
+
+.m-list{
+    width: 250px;
+    height: 100vh;
+    color: rgb(136, 154, 154);
+    border-right: 3px solid rgb(239, 239, 239);
+    margin-left: 50px;
+}
+
+.p-i:hover{
+    border-right: 3px solid #5790AB;
+}
+.pm-i{
+    border-right: 3px solid #5790AB;
+}
+.pm-i{
+    width: 100%;
+
+    height: 50px;
+   
+  
+}
+i{
+    margin-right: 10px;
+}
+.p-i{
+    width: 100%;
+
+    height: 50px;
+   
+    border-right: none;
+}
+.log-out{
+    margin-top: 350px;
+
+}
+.list a{
+    color:#5790AB ;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img{
+    display: flex;
+   margin:100px 0 0 200px ;
+  
+
+
+}
+.img img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid #5790AB;
+    margin-right: 10px;
+ 
+}
+.m-pf{
+  margin-top: 100px;
+}
+.pf{
+    font-size: 7px;
+    display: inline-block;
+}
+.inputs{
+    display: flex;
+   
+   
+}
+.inputs input{
+    margin: 0 100px 0 50px;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid rgb(209, 208, 208);
+    background-color: rgb(246, 246, 246);
+    color: #5790AB;
+}
+.m-main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  
+}
+.p-input{
+    margin-left: 50px;
+    margin-bottom: 3px;
+   
+}
+.inpu{
+    margin-top:50px ;
+}
+.button{
+    width: 600px;
+}
+button{
+    width: 200px;
+    height: 40px;
+    margin: 50px  0 0 250px;
+    background-color:  #5790AB;
+    border-radius: 10px;
+    border: 2px solid rgb(209, 208, 208);
+    color: aliceblue;
+    transition: .7s ease;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color:  #3c6071;
+}
+i{
+    color: #5790AB;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <a href="../shoping.html"><h1 class="logo"><span>SHOP</span>VERGE</h1></a>
+            <p >Welcome to our online clothing store!</p>
+        </div>
+        <div>
+            <ul class="navlist">
+                <li><i class="fa-solid fa-heart"></i>Favorite</li>
+                <li><i class="fa-solid fa-cart-shopping"></i>Cart</li>
+                <li><i class="fa-solid fa-user"></i>Account</li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-section">
+        <video width="320" height="240" controls muted>
+            <source src="video/FASHION CINEMATIC VIDEO _ JITESH THAKUR _ HOUSE OF CREATION _ JAIPUR.mp4.crdownload" type="video/mp4">
+          </video>
+    </div>
+        <div class="categories">
+            <p class="suggestions">You might also like</p>
+            <ul class="category-list">
+                <li><a  href="main.html">Jackets</a></li>
+                <li><a  href="shorts.html">Shorts</a></li>
+                <li><a  href="Men's Jeans.html">Jeans</a></li>
+                <li><a  href="Men's T-shirts.html">T-shirts</a></li>
+            </ul>
+            <p>Jackets</p>
+        </div>
+        <div id="product-container" class="main-content-container">
+        </div>
+        <audio controls autoplay hidden loop>
+            <source src="audio/موسيقى عرض أزياء تفاعلية lonely4music fashion music (64 kbps).mp3.crdownload" type="audio/ogg">
+          </audio>
+          
+          
+    </div>
+
+
+
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            var products = [
+    {
+        image: "images/0119O-90M-003-1-708302.avif",
+        name: "Qualited jacket",
+        price: "300 LE"
+    },
+    {
+        image: "images/4293C-99X-001-1-607011_10.avif",
+        name: "Jacket with standup",
+        price: "500 LE"
+    },
+    {
+        image: "images/5700L-99X-003-1-509809_1.avif",
+        name: "Classic jacket",
+        price: "450 LE"
+    },
+    {
+        image: "images/2119W-99X-001-1-725708_1.avif",
+        name: "Coat",
+        price: "600 LE"
+    },
+    {
+        image: "images/2136W-82X-001-1-737436_1.avif",
+        name: "Jacket",
+        price: "550 LE"
+    },
+    {
+        image: "images/4062W-08X-002-1-732901_2.avif",
+        name: "Shacket",
+        price: "450 LE"
+    },
+    {
+        image: "images/4090W-08X-001-1-718951_14.avif",
+        name: "Hooded parka",
+        price: "700 LE"
+    },
+    {
+        image: "images/4091W-87X-004-1-718952_13.avif",
+        name: "Water proof coat",
+        price: "800 LE"
+    },
+    {
+        image: "images/4281C-55X-001-1-633411_4.avif",
+        name: "Jacket",
+        price: "200 LE"
+    },
+    {
+        image: "images/9882N-02X-003-1-612897_4.avif",
+        name: "Sweatshirt",
+        price: "599 LE"
+    },
+    {
+        image: "images/8363W-09X-003-1-710526_3.avif",
+        name: "Cool jacket",
+        price: "650 LE"
+    },
+    {
+        image: "images/2119W-99X-001-1-725708_1.avif",
+        name: "Coat",
+        price: "800 LE"
+    }
+];
+
+            var productContainer = document.getElementById("product-container");
+        
+            products.forEach(function(product) {
+                var contentDiv = document.createElement("div");
+                contentDiv.classList.add("content");
+        
+                var image = document.createElement("img");
+                image.src = product.image;
+                image.setAttribute("height", "200px");
+                image.setAttribute("width", "200px");
+        
+                var productName = document.createElement("h3");
+                productName.textContent = product.name;
+        
+                var productPrice = document.createElement("p");
+                productPrice.textContent = product.price;
+        
+                var addToCartBtn = document.createElement("p");
+                addToCartBtn.textContent = "Add to cart";
+                addToCartBtn.classList.add("cart-btn");
+        
+                contentDiv.appendChild(image);
+                contentDiv.appendChild(productName);
+                contentDiv.appendChild(productPrice);
+                contentDiv.appendChild(addToCartBtn);
+        
+                productContainer.appendChild(contentDiv);
+            });
+        });
+        </script>
+</body>
+</html>

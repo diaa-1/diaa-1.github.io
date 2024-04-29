@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<title style="background-color:#D0D7E1;">Shopping │ Men's T-shirts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="Logos/shopping-cart-empty-side-view.png">
+  <meta name = "description" content="Men's Clothes"./>
+	<link rel="stylesheet" href="Shape.css">
+  <script type="text/javascript">
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+const buttons = document.querySelectorAll('.image-item button');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            console.log('Button clicked!');
+        });
+    });
+    function stopBackgroundSound() {
+          var audio = document.querySelector('audio');
+          if (audio) {
+              audio.pause();
+              audio.currentTime = 0;
+          }
+      }
+      function startBackgroundSound() {
+          var audio = document.querySelector('audio');
+          if (audio) {
+              audio.play();
+          }
+      }
+
+  </script>
+</head>
+<body>
+    <header>
+      <span class="logo"><a href="../shoping.html" class="">SHOPVERGE</a></span>
+      <div class="right-buttons">
+        <button name="Account" class="button" style="font-size: 17px;">Account</button>
+        <button name="Cart" class="button" style="font-size: 17px;">Cart</button>
+        <button class="button" onclick="openNav()" style="font-size: 17px;">Menu</button>
+  </div>
+</header>
+	<nav class="below-header">
+    <pre>
+
+      <br>
+    <h1 style="color:#064499;font-family:georgia;">You might also like:</h1>
+      <a href="Men's Jeans.html" class="my-link" title="Jeans">Jeans</a>              <a href="shorts.html" class="my-link" title="Shorts">Shorts</a>              <a href="main.html" class="my-link" title="Jackets">Jackets</a>               <a href="Men's T-shirts.html" class="my-link" title="T-shirts">T-shirts</a>
+    </pre>
+	</nav>
+	<main class="below-header">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <br>
+      <br>
+      <br>
+      <a href="#" style="font-size: 20px;font-family:monaco;">Account</a>
+      <br>
+      <br>
+      <a href="#" style="font-size: 20px;font-family:monaco;">Favorites</a>
+      <br>
+      <br>
+      <a href="#" style="font-size: 20px;font-family:monaco;">Cart</a>
+      <br>
+      <br>
+      <a href="#" style="font-size: 20px;font-family:monaco;">Home</a>
+      <br>
+      <br>
+      <a href="#" style="font-size: 20px;font-family:monaco;">About Us</a>
+    </div>
+		<section id="t-shirts">
+      <br>
+			<p style="font-size: 50px;"><b>T-shirts</b></p>
+      <audio autoplay>
+  <source src="audio/Beat with the flow.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<div class="audio">
+        <button onclick="stopBackgroundSound()" class="button">Music OFF</button>
+        <button onclick="startBackgroundSound()" class="button">Music ON</button>
+    </div>
+      <br>
+      <div>
+        <pre>
+
+<label class="label" style="cursor: pointer;">Search</label>  <input type="search" name="search" class="search" placeholder="Search among 12 products" value="">
+        </div>
+        </pre>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="main-body">
+        <div class="product-pic">
+          <a href="d.html">
+          <div class="product-item">
+            <img src="Photos for T-shirts\Cotton Undershirt.jpeg" alt="Cotton Undershirt" title="Cotton Undershirt">
+          </a>
+            <h3>Cotton Undershirt</h3>
+            <p>150 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Boxy T-shirt.jpeg" alt="Boxy T-shirt" title="Boxy T-shirt">
+            </a>
+            <h3>Boxy T-shirt</h3>
+            <p>350 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Comfort fit rib knit T-shirt.jpeg" alt="Comfort fit rib knit T-shirt" title="Comfort fit rib knit T-shirt">
+            </a>
+            <h3>Comfort fit rib knit T-shirt</h3>
+            <p>270 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Comfort fit T-shirt with pocket.jpeg" alt="Comfort fit T-shirt with pocket" title="Comfort fit T-shirt with pocket">
+            </a>
+            <h3>Comfort fit T-shirt with pocket</h3>
+            <p>290 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Cotton sleeveless T-shirt.jpeg" alt="Cotton sleeveless T-shirt" title="Cotton sleeveless T-shirt">
+            </a>
+            <h3>Cotton sleeveless T-shirt</h3>
+            <p>175 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Long sleeve T-shirt with double-layered stand up collar.jpeg" alt="Long sleeve T-shirt with double-layered stand up collar" title="Long sleeve T-shirt with stand up collar">
+            </a>
+            <h3>Long sleeve with standup collar</h3>
+            <p>300 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Oversized T-shirt.jpeg" alt="Oversized T-shirt" title="Oversized T-shirt">
+            </a>
+            <h3>Oversized T-shirt</h3>
+            <p>230 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Regular fit T-shirt with back print.jpeg" alt="Regular fit T-shirt with back print" title="Regular fit T-shirt with back print">
+            </a>
+            <h3>Regular fit T-shirt with back print</h3>
+            <p>200 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Regular fit T-shirt with print.jpeg" alt="Regular fit T-shirt with print" title="Regular fit T-shirt with print">
+            </a>
+            <h3>Regular fit T-shirt with print</h3>
+            <p>200 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Slim fit T-shirt with button-fastened neck.jpeg" alt="Slim fit T-shirt with button-fastened neck" title="Slim fit T-shirt with button-fastened neck">
+            </a>
+            <h3>Slim fit T-shirt with neck</h3>
+            <p>280 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+              <img src="Photos for T-shirts\Slim fit T-shirt.jpeg" alt="Slim fit T-shirt" title="Slim fit T-shirt">
+            </a>
+            <h3>Slim fit T-shirt</h3>
+            <p>220 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>  
+        <div class="product-pic">
+          <div class="product-item">
+            <a href="d.html">
+            <img src="Photos for T-shirts\T-shirt with patch.jpeg" alt="T-shirt with patch" title="T-shirt with patch">
+          </a>
+            <h3>T-shirt with patch</h3>
+            <p>210 L.E</p>
+            <div class="button">
+              <p id="add">Add to cart</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+    </main>
+      </div>
+<footer>
+  
+  <footer class="footer">
+  <ul class="footer-nav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="social-icons">
+    <a href="https://facebook.com/yourprofile"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://instagram.com/yourprofile"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://twitter.com/yourprofile"><i class="fa-brands fa-twitter"></i></a>
+  </div>
+  <p>© 2024 ShopVerge. All rights reserved.</p>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+  const searchInput = document.querySelector('.search');
+
+  const handleSearch = (event) => {
+    console.log('User is searching for:', event.target.value);
+  };
+
+  searchInput.addEventListener('input', handleSearch);
+});
+
+</script>
+</body>
+</html>

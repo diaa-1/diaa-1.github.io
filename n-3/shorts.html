@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shorts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div>
+            <a href="../shoping.html"><h1 class="logo"><span>SHOP</span>VERGE</h1></a>
+            <p >Welcome to our online clothing store!</p>
+        </div>
+        <div>
+            <ul class="navlist">
+                <li><i class="fa-solid fa-heart"></i>Favorite</li>
+                <li><i class="fa-solid fa-cart-shopping"></i>Cart</li>
+                <li><i class="fa-solid fa-user"></i>Account</li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="categories">
+            <p class="suggestions">You might also like</p>
+            <ul class="category-list">
+                <li><a   href="main.html">Jackets</a></li>
+                <li><a   href="shorts.html">Shorts</a></li>
+                <li><a   href="Men's Jeans.html">Jeans</a></li>
+                <li><a   href="Men's T-shirts.html">T-shirts</a></li>
+            </ul>
+            <p>shorts</p>
+        </div>
+        <div id="product-container" class="main-content-container">
+        </div>
+        
+    </div>
+
+
+
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            let products = [
+    {
+        image: "images/shorts/shorts1.avif",
+        name: "Regular shorts",
+        price: "150 LE"
+    },
+    {
+        image: "images/shorts/shorts2.avif",
+        name: "Denim slim shorts",
+        price: "300 LE"
+    },
+    {
+        image: "images/shorts/shorts3.avif",
+        name: "Chino slim shorts",
+        price: "250 LE"
+    },
+    {
+        image: "images/shorts/shorts4.avif",
+        name: "Denim slim shorts",
+        price: "500 LE"
+    },
+    {
+        image: "images/shorts/shorts5.avif",
+        name: "Regular denim shorts",
+        price: "99 LE"
+    },
+    {
+        image: "images/shorts/shorts6.avif",
+        name: "Jogger shorts",
+        price: "150 LE"
+    },
+    {
+        image: "images/shorts/shorts7.avif",
+        name: "Cotton regular shorts",
+        price: "100 LE"
+    },
+    {
+        image: "images/shorts/shorts8.avif",
+        name: "Cargo shorts",
+        price: "300 LE"
+    },
+    {
+        image: "images/shorts/shorts9.avif",
+        name: "Cargo shorts",
+        price: "200 LE"
+    },
+    {
+        image: "images/shorts/shorts10.avif",
+        name: "Cotton jogger shorts",
+        price: "99 LE"
+    },
+    {
+        image: "images/shorts/shorts11.avif",
+        name: "Short tracksuit bottoms",
+        price: "150 LE"
+    },
+    {
+        image: "images/shorts/shorts12.avif",
+        name: "Short tracksuit bottoms",
+        price: "199 LE"
+    }
+];
+
+            let productContainer = document.getElementById("product-container");
+        
+            products.forEach(function(product) {
+                let contentDiv = document.createElement("div");
+                contentDiv.classList.add("content");
+        
+                let image = document.createElement("img");
+                image.src = product.image;
+                image.setAttribute("height", "200px");
+                image.setAttribute("width", "230px");
+
+        
+                let productName = document.createElement("h3");
+                productName.textContent = product.name;
+        
+                let productPrice = document.createElement("p");
+                productPrice.textContent = product.price;
+        
+                let addToCartBtn = document.createElement("p");
+                addToCartBtn.textContent = "Add to cart";
+                addToCartBtn.classList.add("cart-btn");
+        
+                contentDiv.appendChild(image);
+                contentDiv.appendChild(productName);
+                contentDiv.appendChild(productPrice);
+                contentDiv.appendChild(addToCartBtn);
+        
+                productContainer.appendChild(contentDiv);
+            });
+        });
+        </script>
+</body>
+</html>
