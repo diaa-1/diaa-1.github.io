@@ -225,6 +225,11 @@ button:hover{
 }
 
 
+.decripition
+{
+    display: flex;
+    position: relative;
+}
 .DECRAPTION{
     border-bottom: 2px solid  #064469;
     width: 130px;
@@ -239,11 +244,21 @@ pre{
 li{
     letter-spacing: 1px;
     margin-bottom: 5px;
-    color: #064469;
+    color:#979999;
 }
 
-
-
+thead{
+    background-color: #cdcece;
+    color: #072D44;
+}
+tbody{
+    background-color: #064469;
+    color: #cdcece;
+}
+table{
+    position:relative;
+    top: -80px;
+}
 
 
 
@@ -475,4 +490,17 @@ thead th{
 tbody th{
     border:2px solid#cdcece;
     padding: 7px;
+}
+
+
+.yyy{
+    display: flex;
+    justify-content: center;
+    background-color: #072D44;
+    margin-bottom: 100px;
+}
+iframe{
+    width: 600px;
+  
+  
 }

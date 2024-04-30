@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="icon" href="Logos/shopping-cart.png">
+  <link rel="icon" href="Logos\shopping-cart-empty-side-view.png">
   <meta name = "description" content="Men's Clothes"./>
   <link rel="stylesheet" href="Shape 2.css">
   <script type="text/javascript">
@@ -16,38 +16,32 @@
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-const buttons = document.querySelectorAll('.image-item button');
-    buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-            console.log('Button clicked!');
-        });
-    });
-    // Add any JavaScript functionality here (e.g., handling search input, submitting form, etc.)
     const searchInput = document.getElementById('searchInput');
     const searchBtn = document.getElementById('searchBtn');
 
     searchBtn.addEventListener('click', () => {
         const query = searchInput.value;
-        // Handle the search query (e.g., perform search or navigate to search results page)
         console.log(`Searching for: ${query}`);
     });
   </script>
 </head>
 <body>
 	<header>
-      <span class="logo"><a href="../shoping.html" class="">SHOPVERGE</a></span>
+      <span class="logo"><a href="" class="">SHOPVERGE</a></span>
     <div class="right-buttons">
-      <a href="#" onclick="openNav()" style="font-size: 17px; text-align: right;" class="button"><i class="fa-solid fa-bars"></i></a>
+        <button onclick="openNav()" style="font-size: 17px;" class="button"><i class="fa-sharp fa-solid fa-bars"></i></button>
       </div>
 </div>
 	</header>
 
-    <nav class="below-header">
+    <nav class="links">
       <pre>
         <br>
+        <div class="search">
         <br>
-        <h1 style="color:#072D44; font-family:georgia;">                          You might also like:</h1>
+        <h1 style="color: #fff; font-family:georgia;">                          You might also like:</h1>                                                                                                                                                                                               <input type="text" id="searchInput" placeholder="Search..."><button id="searchBtn">Search</button>
                           <a href="Men's Jeans.html" class="my-link" title="Jeans">Jeans</a>              <a href="shorts.html" class="my-link" title="Shorts">Shorts</a>              <a href="main.html" class="my-link" title="Jackets">Jackets</a>               <a href="Men's T-shirts.html" class="my-link" title="T-shirts">T-shirts</a>
+      </div>
     </nav>
 
 	<main class="below-header">
@@ -78,13 +72,8 @@ const buttons = document.querySelectorAll('.image-item button');
         <div>
             <pre>
                 <br>
-                <p style="font-size: 50px;"><b>               Jeans</b></p>
+                <p style="font-size: 50px; color: #fff;"><b>               Jeans</b></p>
                 <div>
-            </pre>
-            <pre>
-            <div class="search">
-                      <input type="text" id="searchInput" placeholder="Search..."><button id="searchBtn">Search</button>
-            </div>
             </pre>
         </div>
         <div class="price-table">
@@ -96,12 +85,11 @@ const buttons = document.querySelectorAll('.image-item button');
                     </tr>
                 </thead>
                 <tbody>
-
                 </tbody>
                 </table>
         </div>
     </div>
-<a href="d.html">
+
       <div class="main-body">
         <div class="product-pic">
           <div class="product-item">
@@ -111,8 +99,6 @@ const buttons = document.querySelectorAll('.image-item button');
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
         </div>
-      </a>
-<a href="d.html">
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans/Cargo slim jeans.jpeg" alt="Cargo slim jeans">
@@ -120,8 +106,7 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>560 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Carrot slim jeans.jpeg" alt="Carrot slim jeans">
@@ -129,8 +114,7 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>370 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Distressed carrot slim jeans.jpeg" alt="Distressed carrot slim jeans">
@@ -138,8 +122,7 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>400 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Regular cropped jeans.jpeg" alt="Regular cropped jeans">
@@ -147,8 +130,7 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>750 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Regular jeans.jpeg" alt="Regular jeans">
@@ -156,8 +138,8 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>300 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
+
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Regular straight jeans.jpeg" alt="Regular straight jeans">
@@ -165,8 +147,7 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>300 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Ripped leg carrot jeans.jpeg" alt="Ripped leg carrot jeans">
@@ -174,8 +155,7 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>480 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Skinny jeans.jpeg" alt="Skinny jeans">
@@ -183,8 +163,7 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>430 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Slim chino jeans.jpeg" alt="Slim chino jeans">
@@ -192,8 +171,7 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>410 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Slim jeans with wash effect.jpeg" alt="Slim jeans with wash effect">
@@ -201,35 +179,31 @@ const buttons = document.querySelectorAll('.image-item button');
             <p>460 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
-            <img src="Photos for Jeans\Skinny jeans.jpeg" alt="Skinny jeans">
-            <h3>Skinny jeans</h3>
-            <p>430 L.E</p>
+            <img src="Photos for Jeans\Distressed carrot slim jeans.jpeg" alt="Distressed carrot slim jeans">
+            <h3>Distressed carrot jeans</h3>
+            <p>400 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
-            <img src="Photos for Jeans\Slim chino jeans.jpeg" alt="Slim chino jeans">
-            <h3>Slim chino jeans</h3>
-            <p>410 L.E</p>
+            <img src="Photos for Jeans\Regular cropped jeans.jpeg" alt="Regular cropped jeans">
+            <h3>Regular cropped jeans</h3>
+            <p>750 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
-            <img src="Photos for Jeans\Slim jeans with wash effect.jpeg" alt="Slim jeans with wash effect">
-            <h3>Jeans with wash effect</h3>
-            <p>460 L.E</p>
+            <img src="Photos for Jeans\Regular jeans.jpeg" alt="Regular jeans">
+            <h3>Regular jeans</h3>
+            <p>300 L.E</p>
             <button type="button" class="add-cart" name="Add to cart">Add to cart</button>
           </div>
-        </div></a>
-        <a href="d.html">
+        </div>
         <div class="product-pic">
           <div class="product-item">
             <img src="Photos for Jeans\Slim jeans.jpeg" alt="Slim jeans">
@@ -239,13 +213,14 @@ const buttons = document.querySelectorAll('.image-item button');
           </div>
         </div>
       </div>
-      </a>
       <section id="home">
-        <video controls class="myVideo" width="600" height="400" muted poster="" autoplay>
+        <video class="myVideo" width="600" height="400" poster="" autoplay loop controls>
           <source src="Denim Forever - Men's Collection - RESERVED.mp4" style="margin-left: 200px;" type="video/mp4">
             Your browser does not support video
         </video>
-        <iframe src="Men's T-shirts.html" width="800" height="400" style="margin-left: 420px;"title="description">For Men's T-shirts</iframe>
+        <div class="iframe-container">
+          <iframe class="responsive-iframe" src="Men's T-shirts.html" width="800" height="400" style="margin-left: 275px;"title="description">For Men's T-shirts</iframe>
+        </div>
       </section>
     </main>
       </div>
@@ -253,7 +228,7 @@ const buttons = document.querySelectorAll('.image-item button');
         <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="Logos/shopping-cart-empty-side-view.png" alt="Your Logo">
+                <img src="Logos/shopping-cart-empty-side-view.png" alt="Logo">
             </div>
             <div class="footer-links">
                 <ul>
