@@ -519,7 +519,19 @@
      
 <script src="shoping.js"></script>
 <script >
-  
+  if(localStorage.length>0){
+    text.value=localStorage.getItem('text')
+}
+text.onkeyup=function(){
+    localStorage.setItem('text',text.value)
+}
+
+if(localStorage.length>0){
+   pass.value=localStorage.getItem('pass')
+}
+pass.onkeyup=function(){
+    localStorage.setItem('pass',pass.value)
+}
   let isearch=document.getElementById('i-search');
   let mainsearch=document.getElementById('main-search');
   isearch.onclick=function(){
@@ -556,6 +568,7 @@ sun.onclick=function(){
   night.classList.remove('hide');
   sun.classList.add('hide');
 }
+
     </script>
 </body>
 </html>
