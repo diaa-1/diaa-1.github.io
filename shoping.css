@@ -716,6 +716,7 @@ footer .u-sec1 ul li a:hover , .d-sec2 ul li a:hover{
 
 }
 .email input{
+    margin-top: 8px;
     height: 35px;
     width: 200px;
     text-align: center;

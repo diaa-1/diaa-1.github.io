@@ -1,94 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Gallery</title>
-  <link rel="stylesheet" href="index1-1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script>document.addEventListener('DOMContentLoaded', function() {
-    let span = document.getElementById('span');
-    let cart = document.querySelector('.cart');
-    let plusButtons = document.querySelectorAll('.plus');
-    let minusButtons = document.querySelectorAll('.minus');
-    let hearts = document.querySelectorAll('.heart');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <link rel="stylesheet" href="index1-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>document.addEventListener('DOMContentLoaded', function () {
+            let span = document.getElementById('span');
+            let cart = document.querySelector('.cart');
+            let plusButtons = document.querySelectorAll('.plus');
+            let minusButtons = document.querySelectorAll('.minus');
+            let hearts = document.querySelectorAll('.heart');
 
-    let itemCount = 0;
-    let heartCount = 0;
-    function openNav() {
-    document.querySelector('.sidenav').style.display = "block";
-}
-
-function closeNav() {
-    document.querySelector('.sidenav').style.display = "none";
-}
-const buttons = document.querySelectorAll('.image-item button');
-  buttons.forEach((button) => {
-      button.addEventListener('click', () => {
-          console.log('Button clicked!');
-      });
-  });
-    // Function to update the cart count
-    function updateCartCount() {
-        span.textContent = itemCount;
-    }
-
-    // Function to update the heart count
-    function updateHeartCount() {
-        spans.textContent = heartCount;
-    }
-
-    // Event listener for plus buttons
-    plusButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            itemCount++;
-            updateCartCount();
-        });
-    });
-
-    // Event listener for minus buttons
-    minusButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            if (itemCount > 0) {
-                itemCount--;
-                updateCartCount();
+            let itemCount = 0;
+            let heartCount = 0;
+            function openNav() {
+                document.querySelector('.sidenav').style.display = "block";
             }
+
+            function closeNav() {
+                document.querySelector('.sidenav').style.display = "none";
+            }
+            const buttons = document.querySelectorAll('.image-item button');
+            buttons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    console.log('Button clicked!');
+                });
+            });
+            // Function to update the cart count
+            function updateCartCount() {
+                span.textContent = itemCount;
+            }
+
+            // Function to update the heart count
+            function updateHeartCount() {
+                spans.textContent = heartCount;
+            }
+
+            // Event listener for plus buttons
+            plusButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    itemCount++;
+                    updateCartCount();
+                });
+            });
+
+            // Event listener for minus buttons
+            minusButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (itemCount > 0) {
+                        itemCount--;
+                        updateCartCount();
+                    }
+                });
+            });
+
+            // Event listener for heart buttons
+            hearts.forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.add('clicked');
+                    heartCount++;
+                    updateHeartCount();
+                });
+            });
+
+            // Event listener to remove the clicked class when animation ends
+            hearts.forEach(button => {
+                button.addEventListener('animationend', () => {
+                    button.classList.remove('clicked');
+                });
+            });
+
+            // Event listener for cart hover effect
+            cart.addEventListener('mouseenter', () => {
+                cart.classList.add('hovered');
+            });
+
+            cart.addEventListener('mouseleave', () => {
+                cart.classList.remove('hovered');
+            });
         });
-    });
-
-    // Event listener for heart buttons
-    hearts.forEach(button => {
-        button.addEventListener('click', () => {
-            button.classList.add('clicked');
-            heartCount++;
-            updateHeartCount();
-        });
-    });
-
-    // Event listener to remove the clicked class when animation ends
-    hearts.forEach(button => {
-        button.addEventListener('animationend', () => {
-            button.classList.remove('clicked');
-        });
-    });
-
-    // Event listener for cart hover effect
-    cart.addEventListener('mouseenter', () => {
-        cart.classList.add('hovered');
-    });
-
-    cart.addEventListener('mouseleave', () => {
-        cart.classList.remove('hovered');
-    });
-});
-</script>
+    </script>
 </head>
+
 <body>
 
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-   
+
     <header>
         <nav class="navigation">
             <div class="order">
@@ -114,8 +118,9 @@ const buttons = document.querySelectorAll('.image-item button');
         <br>
         <br>
         <a href="#" style="font-size: 20px;font-family:monaco;">About Us</a>
-    </div>
-    
+            
+    </div>
+
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
@@ -125,16 +130,17 @@ const buttons = document.querySelectorAll('.image-item button');
             <li><a href="index1-2.html">Blouses</a></li>
             <li><a href="project.html">T-Shirts</a></li>
             <li><a href="y.html">Dresses</a></li>
-            <label class="label" style="cursor: pointer;"></label> <input type="search" name="search" class="search" placeholder="Search" value="">
-                
-           <li>    <button class="menu-button" onclick="openNav()">Menu </button> </li>
+            <label class="label" style="cursor: pointer;"></label> <input type="search" name="search" class="search"
+                placeholder="Search" value="">
+
+            <li> <button class="menu-button" onclick="openNav()">Menu </button> </li>
         </ul>
     </nav>
-    <audio id="myAudio" autoplay controls loop >
-        <source src="Walking-Home-chosic.com_.mp3" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
-    <div class="gallery">
+    <div class="gallery max-width">
+        <audio id="myAudio" autoplay controls loop>
+            <source src="Walking-Home-chosic.com_.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
         <div class="row">
             <div class="column">
                 <div class="photo1"><img src="imgs/modest.webp"></div>
@@ -146,175 +152,175 @@ const buttons = document.querySelectorAll('.image-item button');
             </div>
             <div class="column">
                 <div class="video"><video id="myVideo" autoplay controls muted>
-                    <source src="Bayram şıklığı, tulum rahatlığıyla buluştu!.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video></div>
+                        <source src="Bayram şıklığı, tulum rahatlığıyla buluştu!.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video></div>
             </div>
         </div>
     </div>
     >
-         
-         
-     
-  
-  <div class="product-container">
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->   
-    <div class="product">
-        <a href="product_details.html" target="_blank">
-              <a href="index1-3.html"><img src="imgs/Viscose Maxi Skirt with Lace Waist.webp" alt="Product 1"></a>
-          </a>
-          
-      <h3>DeFacto</h3>
-      <p>Viscose Maxi Skirt with Lace Waist</p>
-      <span class="price">999 EGP</span>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-      </div>
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
-      <div class="button">
-        <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-            <p id="add">ADD</p>
-        <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
-        </div>
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->     
-    </div>
-    <div class="product">
-          <a href="index1-3.html"><img src="imgs/Regular Fit Tricot Skirt1.webp" alt="Product 2"></a>
-       <h3>DeFacto</h3>
-       <span class="price">1299 EGP</span>
-        <p>Regular Fit Tricot Skirt</p>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
-      <div class="button">
-        <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-            <p id="add">ADD</p>
-        <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
-        </div>
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->       
-      </div>
-      <div class="product">
-          <a href="index1-3.html"><img src="imgs/Puff Print Skirt1.webp" alt="Product 1"></a>
-        <h3>DeFacto</h3>
-        <span class="price">799 EGP</span>
-        <p>Puff Print Skirt</p>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
-      <div class="button">
-        <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-            <p id="add">ADD</p>
-        <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
-        </div>
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->       
-      </div>
-      <div class="product">
-          <a href="index1-3.html"><img src="imgs/Printed Skirt1.webp" alt="Product 1"></a>
-        <h3>DeFacto</h3>
-        <span class="price">999 EGP</span>
-        <p>Printed Skirt</p>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
-      <div class="button">
-        <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-            <p id="add">ADD</p>
-        <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
-        </div>
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->       
-      </div>
-      <div class="product">
-          <a href="index1-3.html"><img src="imgs/Cargo Maxi Skirt1.webp" alt="Product 1"></a>
-        <h3>DeFacto</h3>
-        <span class="price">1499 EGP</span>
-        <p>Cargo Maxi Skirt</p>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
-      <div class="button">
-        <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-            <p id="add">ADD</p>
-        <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
-        </div>
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------->        
-      </div>
-      <div class="product">
-          <a href="index1-3.html"><img src="imgs/A Cut Skirt1.webp" alt="Product 1"></a>
-        <h3>DeFacto</h3>
-        <span class="price">1399 EGP</span>
-        <p>A Cut Skirt</p>
-        <div class="rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
-      <div class="button">
-        <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-            <p id="add">ADD</p>
-        <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
-        </div>
- <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------->        
-      </div>
-  </div>
-  <footer>
-    <div class="footercontainer">
-      <div class="socialIcons">
-        <a href="https://www.facebook.com/DeFacto/"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://www.instagram.com/defacto.egypt/"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://twitter.com/defacto"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.tiktok.com/@defacto?lang=tr-TR"><i class="fa-brands fa-tiktok"></i></a>
-    </div>
-        
-    </div>
-    <!------------------------------------->
-    <div class="footernav">
-      <ul>
-        
-        <li><a href="">Home</a></li>
-        <li><a href="https://www.defacto.com.tr/blog">News</a></li>
-        <li><a href="https://corporate.defacto.com.tr/about-us.html">About</a></li>
-        <li><a href="https://defacto.com/en-eg/kurumsal/iletisim">Contact us</a></li>
-
-      </ul>
-
-    </div>
-    <!------------------------------------->
-    <div class="footercopyright">
-      <p>Copyright &copy; 2024; Designed by <b>Shaymaa Ghanim</b> </p>
-    </div>
 
 
-</footer>
+
+
+    <div class="product-container">
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <div class="product">
+            <a href="product_details.html" target="_blank">
+                <a href="index1-3.html"><img src="imgs/Viscose Maxi Skirt with Lace Waist.webp" alt="Product 1"></a>
+            </a>
+
+            <h3>DeFacto</h3>
+            <p>Viscose Maxi Skirt with Lace Waist</p>
+            <span class="price">999 EGP</span>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <div class="button">
+                <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
+                <p id="add">ADD</p>
+                <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+        <div class="product">
+            <a href="index1-3.html"><img src="imgs/Regular Fit Tricot Skirt1.webp" alt="Product 2"></a>
+            <h3>DeFacto</h3>
+            <span class="price">1299 EGP</span>
+            <p>Regular Fit Tricot Skirt</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <div class="button">
+                <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
+                <p id="add">ADD</p>
+                <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+        <div class="product">
+            <a href="index1-3.html"><img src="imgs/Puff Print Skirt1.webp" alt="Product 1"></a>
+            <h3>DeFacto</h3>
+            <span class="price">799 EGP</span>
+            <p>Puff Print Skirt</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <div class="button">
+                <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
+                <p id="add">ADD</p>
+                <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+        <div class="product">
+            <a href="index1-3.html"><img src="imgs/Printed Skirt1.webp" alt="Product 1"></a>
+            <h3>DeFacto</h3>
+            <span class="price">999 EGP</span>
+            <p>Printed Skirt</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <div class="button">
+                <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
+                <p id="add">ADD</p>
+                <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+        <div class="product">
+            <a href="index1-3.html"><img src="imgs/Cargo Maxi Skirt1.webp" alt="Product 1"></a>
+            <h3>DeFacto</h3>
+            <span class="price">1499 EGP</span>
+            <p>Cargo Maxi Skirt</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <div class="button">
+                <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
+                <p id="add">ADD</p>
+                <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+        <div class="product">
+            <a href="index1-3.html"><img src="imgs/A Cut Skirt1.webp" alt="Product 1"></a>
+            <h3>DeFacto</h3>
+            <span class="price">1399 EGP</span>
+            <p>A Cut Skirt</p>
+            <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <div class="button">
+                <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
+                <p id="add">ADD</p>
+                <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+            </div>
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+            <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+    </div>
+    <footer>
+        <div class="footercontainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/DeFacto/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/defacto.egypt/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/defacto"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.tiktok.com/@defacto?lang=tr-TR"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+        </div>
+        <!------------------------------------->
+        <div class="footernav">
+            <ul>
+
+                <li><a href="">Home</a></li>
+                <li><a href="https://www.defacto.com.tr/blog">News</a></li>
+                <li><a href="https://corporate.defacto.com.tr/about-us.html">About</a></li>
+                <li><a href="https://defacto.com/en-eg/kurumsal/iletisim">Contact us</a></li>
+
+            </ul>
+
+        </div>
+        <!------------------------------------->
+        <div class="footercopyright">
+            <p>Copyright &copy; 2024; Designed by <b>Shaymaa Ghanim</b> </p>
+        </div>
+
+
+    </footer>
