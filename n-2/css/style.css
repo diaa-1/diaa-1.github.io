@@ -7,7 +7,8 @@
    body{
  background-image: url("فساتين2/كل-ما-تحتاج-إلى-معرفته-للبدء-في-مشروع-محل-ملابس.png"); 
  background-repeat: no-repeat;
- background-size: cover; 
+ background-size: cover;
+
  } 
 
 
@@ -66,6 +67,7 @@ section {
       background-color: #800;
       opacity: 70%;
       border-radius: 7px;
+      cursor: pointer;
     }
   
     
@@ -195,9 +197,17 @@ div #information{
   padding-top: 60px;
   transition: 0.5s;
 }
+   .star{ 
+          font-size: 19px;
+           color:rgb(251, 217, 27);
+         } 
+         video{
+          width: 800px;
+          height:400px;
+          margin-left: 350px;
+          
+        
+
+         }
 
 
-.star{ 
-  font-size: 19px;
-   color:rgb(251, 217, 27);
- }

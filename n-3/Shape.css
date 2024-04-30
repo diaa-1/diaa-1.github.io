@@ -137,7 +137,7 @@ label:hover {
 }
 .product-pic:hover{
   transform: translateY(-10px);
-  box-shadow: 0 3px 20px  rgba(0, 0, 0, 1);
+  box-shadow: 0 3px 20px  rgba(42, 42, 42, 0.8);
   cursor: pointer;
 }
 .product-item {
@@ -184,4 +184,89 @@ a{
   .social-icons img {
     width: 30px;
     margin: 0 5px;
+  }
+  .container{
+      width: 400px;
+      background-color: #9CCDDB;
+      box-shadow: 0 0 8px rgba(250, 250, 250, 0.6);
+      align-items: right;
+      justify-content: right;
+      width: 100%;
+      margin-left: 0%;
+      margin-top: 0%;
+      margin-bottom: 0%;
+  }
+  .container form{
+      width: 100%;
+      text-align: center;
+      padding: 25px 20px;
+  }
+   form h3{
+      padding: 10px 0;
+      color: white;
+
+  }
+  form .id{
+      position:relative;
+  }
+
+  .id i{
+      position: absolute;
+      font-size:20px ;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+  }
+  form input{
+      width: 100%;
+      height:50px ;
+      margin: 4px 0;
+      border: 1px solid #8a8989 ;
+      border-radius: 3px;
+      background: #D0D7E1;
+      padding: 0 15px;
+      padding-right: 45px;
+      font-size: 20px;
+  }
+  form textarea{
+      padding: 5px 15px;
+      border: 1px solid#8a8989;
+      border-radius: 3px;
+      background:#D0D7E1;
+     width: 100%;
+      font-size: 20px;
+      margin:4px 0;
+      align-items: center;
+  }
+  form button{
+      margin-top: 5px;
+      border: none;
+      background: #072D44;
+      color: ;
+      padding: 10px 0;
+      width: 100%;
+      font-size: 20px;
+      font-weight: 800;
+      cursor: pointer;
+      border-radius: 3px;
+      align-items: center;
+      margin: 4px 0;
+
+  }
+  form input:focus,
+  form textarea:focus{
+      border: 1px solid goldenrod;
+      color: black;
+      transition: all 0.3s ease ;
+  }
+  form input:focus::placeholder
+  form textarea:focus::placeholder{
+      border-left: 4px;
+      color: black;
+      transition: all 0.3s ease ;
+  }
+  form input:focus + i{
+      color: black;
+      transition: all 0.3s ease ;
+
   }

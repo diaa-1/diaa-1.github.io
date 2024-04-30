@@ -225,6 +225,11 @@ button:hover{
 }
 
 
+.decripition
+{
+    display: flex;
+    position: relative;
+}
 .DECRAPTION{
     border-bottom: 2px solid  #064469;
     width: 130px;
@@ -239,11 +244,21 @@ pre{
 li{
     letter-spacing: 1px;
     margin-bottom: 5px;
-    color: #064469;
+    color:#979999;
 }
 
-
-
+thead{
+    background-color: #cdcece;
+    color: #072D44;
+}
+tbody{
+    background-color: #064469;
+    color: #cdcece;
+}
+table{
+    position:relative;
+    top: -80px;
+}
 
 
 

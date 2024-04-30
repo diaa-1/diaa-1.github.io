@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="shoping.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
+<body id="body">
     
 
 
@@ -48,10 +48,10 @@
           <a class="a-search" href="n-1/index2-2.html"><p class="p-search">T-SHIRT for kids</p></a>
       </div>
       <div class="product-search">
-        <a class="a-search" href="n-4/project.html"><p class="p-search">T-SHIRT FOR WOMEN</p></a>
+        <a class="a-search" href="n-2/project.html"><p class="p-search">T-SHIRT FOR WOMEN</p></a>
     </div>
       <div class="product-search">
-          <a class="a-search" href=""><p class="p-search">SHORT</p></a>
+          <a class="a-search" href="n-2/y.html"><p class="p-search">DRESSES FOR WOMEN</p></a>
       </div>
       <div class="product-search">
           <a class="a-search" href=""><p class="p-search">BAG</p></a>
@@ -78,8 +78,11 @@
             <a href="n-3/Men's Jeans.html" >MEN</a>
             <a href="n-2/index1-2.html">WOMEN</a>
             <a href="n-1/index2-1.html">KIDS</a>
+            <i id="night" class="fa fa-moon"></i>
+            <i id="sun" class="fa fa-sun hide"></i>
             <i class="fa fa-list" id="open"></i>
         </nav>
+       
     </header>
 
 
@@ -100,11 +103,12 @@
     <br>
     <label for="pass">password </label>
     <input id="pass" type="password" name="password"  placeholder="enter your password" required>
+    <i class="fa fa-eye" id="eye"></i>
     <br>
     <div class="d">
     <input type="checkbox" id="d" required>
     <label for="d" id="dd">I am not robot </label>
-    <i class="fa fa-eye" id="eye"></i>
+    
     </div>
     <br>
     <input type="submit" id="x" value="click">
@@ -113,11 +117,11 @@
     
       <div class="m-menu">
         <div class="hide" id="menu">
-          <p ><a href="w.html" id="ac">Account  </a>     <i class="fa fa-user-circle"></i></p>
+          <p ><a href="n-4/index5.html" id="ac">Account  </a>     <i class="fa fa-user-circle"></i></p>
           <p><a href="n-3/Men's Jeans.html">MEN</a></p>
           <p><a href="n-2/index1-2.html">WOMEN</a></p> 
           <p><a href="n-1/index2-1.html">KIDS</a></p>
-          <p>SALE</p>
+          <p><a href="n-4/discount.html">SALE</a></p>
           <p id="sign in">SIGN IN</p>
           <p id="ex">EXIT<i class="fa fa-arrow-right"></i></p>
           
@@ -331,7 +335,7 @@
 </div>
 <!-- /*********************************************************************************************************/ -->
 <div class="h">
-  <img class="hh" src="image\IMG-20240420-WA0043.jpg">
+  <img class="hh" src="\image\IMG-20240420-WA0043.jpg">
 </div>
 <div class="p-crocs">
 <p>
@@ -540,7 +544,18 @@
  }
 
   }
-
+let night=document.getElementById('night');
+let sun=document.getElementById('sun');
+night.onclick=function(){
+  body.style.background="#08161f";
+  night.classList.add('hide');
+  sun.classList.remove('hide');
+}
+sun.onclick=function(){
+  body.style.background="white";
+  night.classList.remove('hide');
+  sun.classList.add('hide');
+}
     </script>
 </body>
 </html>

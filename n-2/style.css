@@ -65,20 +65,34 @@ section {
       text-align: left;
       vertical-align: center;
     }
-  .contener{
-  width: 100%;
-  display: flex;
-  margin-bottom: 1000px;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: auto;
-  }
-  .dresses{
-  width: 25%;
-  height: 300px;
-  margin-bottom:250px;
-  }
+    body{
+      background-color: rgb(208, 221, 239);
+      }
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+      .contener{
+          width: 100%;
+          display: flex;
+          margin-bottom: 1000px;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          margin: auto;
+      }
+      .dresses{
+          width: 25%;
+          height: 300px;
+          margin-bottom:250px; 
+       
+        } 
+         button{
+          color: aliceblue;
+          background-color: rgb(39, 112, 152);
+          opacity: 70%;
+          border-radius:7px;
+         }
+      
 
-
-  

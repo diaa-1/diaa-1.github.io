@@ -24,7 +24,12 @@ header{
     font-size: 30px;
     font-weight: 500;
     color: #072D44;
+    
 }
+#night,#sun{
+    margin-left: 20px;
+}
+
 .logo{
     text-decoration:none;
     text-transform:uppercase;
@@ -716,7 +721,6 @@ footer .u-sec1 ul li a:hover , .d-sec2 ul li a:hover{
 
 }
 .email input{
-    margin-top: 8px;
     height: 35px;
     width: 200px;
     text-align: center;
@@ -771,4 +775,13 @@ footer .u-sec1 ul li a:hover , .d-sec2 ul li a:hover{
  }
 .su{
     color: #072D44;
+}
+
+
+
+.name{
+    display: none;
+}
+form{
+    margin-top: 8px;
 }

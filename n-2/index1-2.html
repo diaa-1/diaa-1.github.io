@@ -1,341 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Gallery</title>
   <link rel="stylesheet" href="index1-2.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script>document.addEventListener('DOMContentLoaded', function () {
-      let span = document.getElementById('span');
-      let cart = document.querySelector('.cart');
-      let plusButtons = document.querySelectorAll('.plus');
-      let minusButtons = document.querySelectorAll('.minus');
-      let hearts = document.querySelectorAll('.heart');
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    let span = document.getElementById('span');
+    let cart = document.querySelector('.cart');
+    let plusButtons = document.querySelectorAll('.plus');
+    let minusButtons = document.querySelectorAll('.minus');
+    let hearts = document.querySelectorAll('.heart');
 
-      let itemCount = 0;
-      let heartCount = 0;
+    let itemCount = 0;
+    let heartCount = 0;
 
-      // Function to update the cart count
-      function updateCartCount() {
+    // Function to update the cart count
+    function updateCartCount() {
         span.textContent = itemCount;
-      }
+    }
 
-      // Function to update the heart count
-      function updateHeartCount() {
+    // Function to update the heart count
+    function updateHeartCount() {
         spans.textContent = heartCount;
-      }
+    }
 
-      // Event listener for plus buttons
-      plusButtons.forEach(button => {
+    // Event listener for plus buttons
+    plusButtons.forEach(button => {
         button.addEventListener('click', () => {
-          itemCount++;
-          updateCartCount();
-        });
-      });
-
-      // Event listener for minus buttons
-      minusButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          if (itemCount > 0) {
-            itemCount--;
+            itemCount++;
             updateCartCount();
-          }
         });
-      });
-
-      // Event listener for heart buttons
-      hearts.forEach(button => {
-        button.addEventListener('click', () => {
-          button.classList.add('clicked');
-          heartCount++;
-          updateHeartCount();
-        });
-      });
-
-      // Event listener to remove the clicked class when animation ends
-      hearts.forEach(button => {
-        button.addEventListener('animationend', () => {
-          button.classList.remove('clicked');
-        });
-      });
-
-      // Event listener for cart hover effect
-      cart.addEventListener('mouseenter', () => {
-        cart.classList.add('hovered');
-      });
-
-      cart.addEventListener('mouseleave', () => {
-        cart.classList.remove('hovered');
-      });
     });
-  </script>
+
+    // Event listener for minus buttons
+    minusButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (itemCount > 0) {
+                itemCount--;
+                updateCartCount();
+            }
+        });
+    });
+
+    // Event listener for heart buttons
+    hearts.forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.add('clicked');
+            heartCount++;
+            updateHeartCount();
+        });
+    });
+
+    // Event listener to remove the clicked class when animation ends
+    hearts.forEach(button => {
+        button.addEventListener('animationend', () => {
+            button.classList.remove('clicked');
+        });
+    });
+
+    // Event listener for cart hover effect
+    cart.addEventListener('mouseenter', () => {
+        cart.classList.add('hovered');
+    });
+
+    cart.addEventListener('mouseleave', () => {
+        cart.classList.remove('hovered');
+    });
+});
+</script>
 </head>
-
 <body>
-  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-  <header>
-    <nav class="navigation">
-      <div class="order">
-        <i class="fa fa-shopping-cart" id="carts"></i>
-        <div class="cart">
-          <span class="span" id="span">0</span>
-        </div>
-      </div>
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+   
+    <header>
+        <nav class="navigation">
+            <div class="order">
+                <i class="fa fa-shopping-cart" id="carts"></i>
+                <div class="cart">
+                    <span class="span" id="span">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index1-1.html">Skirts</a></li>
+            <li><a href="index1-2.html">Blouses</a></li>
+            <li><a href="project.html">T-Shirts</a></li>
+            <li><a href="y.html">Dresses</a></li>
+        </ul>
     </nav>
-  </header>
+    <audio id="myAudio" autoplay control loop >
+        <source src="Walking-Home-chosic.com_.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
 
-
-  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-  <nav class="navbar">
-    <ul>
-      <li><a href="index1-1.html">Skirts</a></li>
-      <li><a href="index1-2.html">Blouses</a></li>
-      <li><a href="project.html">T-Shirts</a></li>
-      <li><a href="y.html">Dresses</a></li>
-    </ul>
-  </nav>
-  <audio id="myAudio" autoplay control loop>
-    <source src="Walking-Home-chosic.com_.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag.
-  </audio>
-
-  <!--video id="myVideo"  autoplay controls muted>
+    <!--video id="myVideo"  autoplay controls muted>
         <source src="Bayram şıklığı, tulum rahatlığıyla buluştu!.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video-->
   <div class="product-container">
     <div class="product">
-
-      <a href="index1-3.html"><img src="imgs/Fitted Crew Neck Short Sleeve Washable T-Shirt.webp" alt="Product 1"></a>
-
+       
+            <a href="index1-3.html"><img src="imgs/Fitted Crew Neck Short Sleeve Washable T-Shirt.webp" alt="Product 1"></a>
+        
       <h3>DeFacto</h3>
       <span class="price">499 EGP</span>
       <p>Fitted Crew Neck Short Sleeve Washable T-Shirt</p>
-
-
+       
+      
       <div class="rating">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
         <i class="far fa-star"></i>
-      </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
       <div class="button">
         <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-        <p id="add">ADD</p>
+            <p id="add">ADD</p>
         <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
-      </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-
+        </div>
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      
+      
     </div>
-
+    
     <div class="product">
-      <a href="index1-3.html"><img src="imgs/Oversize Fit Crew Neck Striped T-Shirt.webp" alt="Product 2"></a>
-      <h3>DeFacto</h3>
-      <span class="price">299 EGP</span>
-      <p>Oversize Fit Crew Neck Striped T-Shirt</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-      </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <a href="index1-3.html"><img src="imgs/Oversize Fit Crew Neck Striped T-Shirt.webp" alt="Product 2"></a>
+       <h3>DeFacto</h3>
+       <span class="price">299 EGP</span>
+        <p>Oversize Fit Crew Neck Striped T-Shirt</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
       <div class="button">
         <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-        <p id="add">ADD</p>
+            <p id="add">ADD</p>
         <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+        </div>
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
       </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    </div>
-    <div class="product">
-      <a href="index1-3.html"><img src="imgs/Regular Fit Crew Neck Printed Short Sleeve Tunic.webp" alt="Product 1"></a>
-      <h3>DeFacto</h3>
-      <span class="price">699 EGP</span>
-      <p>Regular Fit Crew Neck Printed Short Sleeve Tunic</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-      </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="product">
+        <a href="index1-3.html"><img src="imgs/Regular Fit Crew Neck Printed Short Sleeve Tunic.webp" alt="Product 1"></a>
+        <h3>DeFacto</h3>
+        <span class="price">699 EGP</span>
+        <p>Regular Fit Crew Neck Printed Short Sleeve Tunic</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
       <div class="button">
         <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-        <p id="add">ADD</p>
+            <p id="add">ADD</p>
         <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+        </div>
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
       </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    </div>
-    <div class="product">
-      <a href="index1-3.html"><img src="imgs/Regular Fit V-Neck Short Sleeve T-Shirt.webp" alt="Product 1"></a>
-      <h3>DeFacto</h3>
-      <span class="price">999 EGP</span>
-      <p>Regular Fit V-Neck Short Sleeve T-Shirt</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-      </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="product">
+        <a href="index1-3.html"><img src="imgs/Regular Fit V-Neck Short Sleeve T-Shirt.webp" alt="Product 1"></a>
+        <h3>DeFacto</h3>
+        <span class="price">999 EGP</span>
+        <p>Regular Fit V-Neck Short Sleeve T-Shirt</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
       <div class="button">
         <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-        <p id="add">ADD</p>
+            <p id="add">ADD</p>
         <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+        </div>
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
       </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    </div>
-    <div class="product">
-      <a href="index1-3.html"><img src="imgs/Relax Fit Polo Collar Striped Short Sleeve Polo T-Shirt.webp"
-          alt="Product 1"></a>
-      <h3>DeFacto</h3>
-      <span class="price">1499 EGP</span>
-      <p>Relax Fit Polo Collar Striped Short Sleeve Polo T-Shirt</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-      </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="product">
+        <a href="index1-3.html"><img src="imgs/Relax Fit Polo Collar Striped Short Sleeve Polo T-Shirt.webp" alt="Product 1"></a>
+        <h3>DeFacto</h3>
+        <span class="price">1499 EGP</span>
+        <p>Relax Fit Polo Collar Striped Short Sleeve Polo T-Shirt</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
       <div class="button">
         <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-        <p id="add">ADD</p>
+            <p id="add">ADD</p>
         <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+        </div>
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
       </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    </div>
-    <div class="product">
-      <a href="index1-3.html"><img src="imgs/Slim Fit Crew Neck Camisole Short Sleeve T-Shirt.webp" alt="Product 1"></a>
-      <h3>DeFacto</h3>
-      <span class="price">399 EGP</span>
-      <p>Slim Fit Crew Neck Camisole Short Sleeve T-Shirt</p>
-      <div class="rating">
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="fas fa-star"></i>
-        <i class="far fa-star"></i>
-        <i class="far fa-star"></i>
-      </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="product">
+        <a href="index1-3.html"><img src="imgs/Slim Fit Crew Neck Camisole Short Sleeve T-Shirt.webp" alt="Product 1"></a>
+        <h3>DeFacto</h3>
+        <span class="price">399 EGP</span>
+        <p>Slim Fit Crew Neck Camisole Short Sleeve T-Shirt</p>
+        <div class="rating">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->      
       <div class="button">
         <div class="minus"><i class="fa fa-minus" id="minus"></i></div>
-        <p id="add">ADD</p>
+            <p id="add">ADD</p>
         <div class="plus"><i class="fa fa-plus" id="plus"></i></div>
+        </div>
+ <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        
       </div>
-      <!------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-    </div>
   </div>
   <footer>
-
+      
 
 
 
     <section class="u-sec1">
 
 
-      <a href="" class="logo">SHOP<span class="verge">VERGE</span> </a>
-      <ul>
-        <h1>Company</h1>
-        <li><a href="#">Teams</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-      <ul>
-        <h1>About</h1>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">Team & Company</a></li>
-        <li><a href="#">Location</a></li>
-        <li><a href="#">Our Services</a></li>
-      </ul>
-      <ul>
-        <h1>Contact Us</h1>
-        <li>
-          <p class="ph">Phone +966 0586 0</p>
-        </li>
-        <li>
-          <p class="ph">Email @gmail</p>
-        </li>
-        <li><a href="#">Form</a></li>
-
-      </ul>
+     <a href="" class="logo">SHOP<span class="verge">VERGE</span> </a>
+       <ul>
+         <h1>Company</h1>
+         <li><a href="#">Teams</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">Contact Us</a></li>
+         <li><a href="#">Support</a></li>
+       </ul>
+       <ul>
+         <h1>About</h1>
+         <li><a href="#">ABOUT</a></li>
+         <li><a href="#">Team & Company</a></li>
+         <li><a href="#">Location</a></li>
+         <li><a href="#">Our Services</a></li>
+       </ul>
+       <ul>
+       <h1>Contact Us</h1>
+       <li><p class="ph">Phone +966 0586 0</p></li>
+       <li><p class="ph">Email @gmail</p></li>
+       <li><a href="#">Form</a></li>
+   
+     </ul>
     </section>
 
     <section class="d-sec2">
 
 
-
-      <ul>
-        <h1>Company</h1>
-        <li><a href="#">Teams</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-      <ul>
-        <h1>About</h1>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">Team & Company</a></li>
-        <li><a href="#">Location</a></li>
-        <li><a href="#">Our Services</a></li>
-      </ul>
-      <div class="social">
-        <h1>Social</h1>
-        <div class="social-icon">
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fab fa-codepen"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-      </div>
-      <div class="email">
-        <h1>Email</h1>
-        <form>
-          <input type="email" placeholder="Enter Your Email">
-          <button type="submit" value="click" class="su">click</button>
-        </form>
-
-
-        <div class="card-ev">
-          <p class="star">EVALUATION</p>
-          <div class="ii">
-            <i class="fa fa-star checked" id='test1'></i>
-            <i class="fa fa-star checked" id='test2'></i>
-            <i class="fa fa-star checked" id='test3'></i>
-            <i class="fa fa-star checked" id='test4'></i>
-            <i class="fa fa-star checked" id='test5'></i>
-          </div>
-        </div>
+   
+       <ul>
+         <h1>Company</h1>
+         <li><a href="#">Teams</a></li>
+         <li><a href="#">Services</a></li>
+         <li><a href="#">Contact Us</a></li>
+         <li><a href="#">Support</a></li>
+       </ul>
+       <ul>
+         <h1>About</h1>
+         <li><a href="#">ABOUT</a></li>
+         <li><a href="#">Team & Company</a></li>
+         <li><a href="#">Location</a></li>
+         <li><a href="#">Our Services</a></li>
+       </ul>
+     <div class="social">
+       <h1>Social</h1>
+       <div class="social-icon">
+         <a href="#"><i class="fab fa-youtube"></i></a>
+         <a href="#"><i class="fab fa-github"></i></a>
+         <a href="#"><i class="fab fa-codepen"></i></a>
+         <a href="#"><i class="fab fa-linkedin"></i></a>
+       </div>
+     </div>
+     <div class="email">
+       <h1>Email</h1>
+       <form>
+       <input type="email" placeholder="Enter Your Email">
+       <button type="submit" value="click" class="su">click</button>
+     </form>
 
 
+     <div class="card-ev">
+      <p class="star">EVALUATION</p>
+    <div class="ii">
+      <i class="fa fa-star checked"id='test1'></i>
+      <i class="fa fa-star checked"id='test2'></i>
+      <i class="fa fa-star checked"id='test3'></i>
+      <i class="fa fa-star checked"id='test4'></i>
+      <i class="fa fa-star checked"id='test5'></i>
+    </div>
+  </div>
 
-      </div>
+
+
+     </div>
     </section>
-
-
-  </footer>
+  
+  
+</footer>
 </body>
-
 </html>
